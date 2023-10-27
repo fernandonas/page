@@ -6,11 +6,11 @@ jobs:
   continous-integration:
   runs-on: unbuntu-latest
   steps:
-    - uses: actions/checkout@v3
-    - name: Using Node 
-      uses: actions/setup-node@v2
+    - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
         with:
-         node-version: '16.x'
+          node-version: '16.x'
       name: run install, build and test
       run: |
       npm instal
