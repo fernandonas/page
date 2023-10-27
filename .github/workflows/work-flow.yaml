@@ -1,0 +1,19 @@
+name: Continous Integration
+
+on: pull_request
+
+jobs: 
+  continous-integration:
+  runs-on: unbuntu-latest
+
+  steps:
+    - uses: actions/checkout@v3
+    - name: Using Node 
+      uses: actions/setup-node@v2
+        with:
+         node-version: 16.
+      name: run install, build and test
+      run: |
+      npm instal
+      npm run build
+      npm run test
